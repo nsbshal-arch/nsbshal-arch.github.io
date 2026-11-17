@@ -1109,3 +1109,16 @@ p { text-wrap: pretty; }
 /* highlighted culture nav item */
 .nav a.nav-highlight { color: var(--pop); font-weight: 700; }
 .nav a.nav-highlight:hover { color: var(--accent); }
+
+/* ---------- cases index page ---------- */
+.filter-bar { display: flex; flex-wrap: wrap; gap: 10px; margin: 28px 0 32px; }
+.filter-btn {
+  font: inherit; font-size: 13.5px; cursor: pointer;
+  background: #fff; color: var(--ink-soft);
+  border: 1px solid var(--line); border-radius: 999px; padding: 8px 16px;
+  transition: background .15s ease, color .15s ease, border-color .15s ease;
+}
+.filter-btn:hover { border-color: #cfc8b7; }
+.filter-btn.is-active { background: var(--accent); color: #fff; border-color: var(--accent); }
+.cases-index .case-card { cursor: pointer; }
+.case-card.is-hidden { display: none; }
