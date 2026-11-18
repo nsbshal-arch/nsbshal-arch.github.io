@@ -1127,4 +1127,4 @@ p { text-wrap: pretty; }
 .case-card h3 { text-transform: uppercase; letter-spacing: .035em; font-size: clamp(16px, 1.45vw, 19px); line-height: 1.32; }
 .case-visual img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
-.portrait-hero img { aspect-ratio: 1200 / 1337; object-fit: contain; background: var(--paper); }
+.portrait-hero img { aspect-ratio: auto; height: auto; object-fit: contain; background: var(--paper); }
