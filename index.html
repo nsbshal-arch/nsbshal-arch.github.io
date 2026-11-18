@@ -87,9 +87,9 @@
             Открыта к&nbsp;проектной работе и&nbsp;долгосрочным задачам — <b>инхаус</b> или <b>приглашённый тренер</b>.
           </p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#contact">Обсудить задачу <span aria-hidden="true">→</span></a>
-            <a class="btn btn-ghost" href="https://t.me/vestnik_adekvatnosti" target="_blank" rel="noopener">Telegram</a>
-            <a class="btn btn-ghost" href="mailto:nsbshal@gmail.com">Почта</a>
+            <a class="btn btn-primary" href="#contact" data-goal="cta_hero">Обсудить задачу <span aria-hidden="true">→</span></a>
+            <a class="btn btn-ghost" href="https://t.me/vestnik_adekvatnosti" target="_blank" rel="noopener" data-goal="telegram">Telegram</a>
+            <a class="btn btn-ghost" href="mailto:nsbshal@gmail.com" data-goal="email">Почта</a>
           </div>
           <div class="hero-links">
             <span class="status-dot" aria-hidden="true"></span>
@@ -167,7 +167,7 @@
           <h2>Шесть историй, которые показывают подход</h2>
           <p>Задача → механика → результат. Компании и данные обезличены, материалов под NDA нет.</p>
         </div>
-        <a class="btn btn-primary" href="cases.html">Все 15 кейсов →</a>
+        <a class="btn btn-primary" href="cases.html" data-goal="all_cases">Все 15 кейсов →</a>
       </div>
       <div class="cases-grid">
         <a class="case-card" href="cases/sales-training-program.html" data-tag="Обучение и L&amp;D">
@@ -477,13 +477,13 @@
           <h2>Обсудим задачу?</h2>
           <p>Расскажите контекст — команда, культура, обучение или аудит. Предложу формат, первый шаг и&nbsp;честно скажу, где я не&nbsp;лучший выбор.</p>
           <div class="contact-actions">
-            <a class="btn btn-primary" href="mailto:nsbshal@gmail.com">Написать на&nbsp;почту</a>
-            <a class="btn btn-ghost" href="https://t.me/vestnik_adekvatnosti" target="_blank" rel="noopener">Telegram</a>
+            <a class="btn btn-primary" href="mailto:nsbshal@gmail.com" data-goal="email_contact">Написать на&nbsp;почту</a>
+            <a class="btn btn-ghost" href="https://t.me/vestnik_adekvatnosti" target="_blank" rel="noopener" data-goal="telegram_contact">Telegram</a>
           </div>
         </div>
         <div class="contact-links">
-          <a class="contact-link" href="mailto:nsbshal@gmail.com"><span>Email</span><span>nsbshal@gmail.com</span></a>
-          <a class="contact-link" href="https://t.me/vestnik_adekvatnosti" target="_blank" rel="noopener"><span>Telegram</span><span>@vestnik_adekvatnosti ↗</span></a>
+          <a class="contact-link" href="mailto:nsbshal@gmail.com" data-goal="email_link"><span>Email</span><span>nsbshal@gmail.com</span></a>
+          <a class="contact-link" href="https://t.me/vestnik_adekvatnosti" target="_blank" rel="noopener" data-goal="telegram_link"><span>Telegram</span><span>@vestnik_adekvatnosti ↗</span></a>
           <a class="contact-link" href="tel:+79221376431"><span>Телефон</span><span>+7 (922) 137-64-31</span></a>
         </div>
       </div>
@@ -616,6 +616,14 @@
     counters.forEach(function (c) { cio.observe(c); });
   }
 })();
+</script>
+<script>
+document.addEventListener('click', function(e){{
+  var a = e.target.closest('a[data-goal]');
+  if (a && typeof ym === 'function') {{
+    ym(114339201, 'reachGoal', a.getAttribute('data-goal'));
+  }}
+}}, true);
 </script>
 </body>
 </html>
